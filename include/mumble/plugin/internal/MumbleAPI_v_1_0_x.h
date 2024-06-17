@@ -525,6 +525,9 @@ struct MumbleAPI_v_1_0_x {
 	/// @param samplePath The path to the sample that shall be played (UTF-8 encoded)
 	/// @returns The error code. If everything went well, STATUS_OK will be returned.
 	mumble_error_t(PLUGIN_CALLING_CONVENTION *playSample)(mumble_plugin_id_t callerID, const char *samplePath);
+
+	mumble_error_t(PLUGIN_CALLING_CONVENTION *toggleRecording)(mumble_plugin_id_t callerID, const char* folder,
+															   void* stoppedCallback);
 };
 
 #endif // EXTERNAL_MUMBLE_PLUGIN_API_H_

@@ -90,6 +90,7 @@ public:
 	void log(const char *message) const;
 	mumble_error_t log_noexcept(const char *message) const noexcept;
 	void playSample(const char *samplePath) const;
+	void toggleRecording(const char* folder, void* stoppedCallback) const;
 };
 
 #endif // MUMBLEPLUGIN_MUMBLEAPI_H_
