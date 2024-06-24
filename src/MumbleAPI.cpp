@@ -390,8 +390,8 @@ void MumbleAPI::playSample(const char *samplePath) const {
 	HANDLE_ERROR(errorCode, playSample);
 }
 
-void MumbleAPI::toggleRecording(const char* folder, void* stoppedCallback) const {
-	mumble_error_t errorCode = m_apiStruct.toggleRecording(m_pluginID, folder, stoppedCallback);
+void MumbleAPI::toggleRecording(const char* folder, void* stoppedCallback, void* userParam) const {
+	mumble_error_t errorCode = m_apiStruct.toggleRecording(m_pluginID, folder, stoppedCallback, userParam);
 
 	HANDLE_ERROR(errorCode, toggleRecording);
 }
